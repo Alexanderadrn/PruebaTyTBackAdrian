@@ -52,7 +52,7 @@ namespace PruebaTTBack.Controllers
             var result = _usuario.ObtenerUsuarios();
             return new JsonResult(result);
         }
-        [HttpGet("obtener-usuarios-by-filtro")]
+        [HttpPost("obtener-usuarios-by-filtro")]
         public IActionResult GetUsuariosFiltros(UsuariosDto usuario)
         {
             if(usuario.IdDepartamento != 0 && usuario.IdCargo != 0)
